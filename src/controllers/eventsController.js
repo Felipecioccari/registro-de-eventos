@@ -51,9 +51,9 @@ class EventsController {
       const eventsResult = await events.findByIdAndUpdate(id, {$set: req.body});
 
       if (eventsResult !== null) {
-        res.status(200).send({message: "Livro atualizado com sucesso"});
+        res.status(200).send({message: "evento atualizado com sucesso"});
       } else {
-        next(new NotFind("Id do livro não localizado."));
+        next(new NotFind("Id do evento não localizado."));
       }
     } catch (erro) {
       next(erro);

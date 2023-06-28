@@ -23,7 +23,7 @@ class UserController {
       if (userResultado !== null) {
         res.status(200).send(userResultado);
       } else {
-        next(new NotFind("Id do user não localizado."));
+        next(new NotFind("Id do usuario não localizado."));
       }
     } catch (erro) {
       next(erro);
@@ -49,9 +49,9 @@ class UserController {
       const userResultado = await users.findByIdAndUpdate(id, {$set: req.body});
 
       if (userResultado !== null) {
-        res.status(200).send({message: "user atualizado com sucesso"});
+        res.status(200).send({message: "usuario atualizado com sucesso"});
       } else {
-        next(new NotFind("Id do user não localizado."));
+        next(new NotFind("Id do usuario não localizado."));
       }
 
     } catch (erro) {
@@ -67,9 +67,9 @@ class UserController {
 
 
       if (userResultado !== null) {
-        res.status(200).send({message: "user removido com sucesso"});
+        res.status(200).send({message: "usuario removido com sucesso"});
       } else {
-        next(new NotFind("Id do user não localizado."));
+        next(new NotFind("Id do usuario não localizado."));
       }
     } catch (erro) {
       next(erro);
