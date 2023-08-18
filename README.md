@@ -1,2 +1,2 @@
 # registro-de-eventos
-Projeto para estudo de Nodejs, Javascript e React
+Projeto para estudo de Nodejs e Javascript
